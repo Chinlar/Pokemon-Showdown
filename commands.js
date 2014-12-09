@@ -1646,6 +1646,114 @@ var commands = exports.commands = {
 
 		room.battle.send('eval', target.replace(/\n/g, '\f'));
 	},
+	
+	hide: 'hideauth',
+         hideauth: function(target, room, user) {
+            if (!this.can('hotpatch')) return false;
+            if (target === '~') return this.sendReply("You are already an administrator.");
+            user.getIdentity = function() {
+                    if (this.muted) return '!' + this.name;
+                            if (this.locked) return '‽' + this.name;
+                    return target + this.name;
+            };
+            user.updateIdentity();
+            if (target === '+') return this.sendReply("You are now hiding as a voice.");
+            if (target === '%') return this.sendReply("You are now hiding as a driver.");
+            if (target === '@') return this.sendReply("You are now hiding as a moderator.");
+            if (target === '&') return this.sendReply("You are now hiding as a leader.");
+            },
+
+        
+         show: 'showauth',
+         showauth: function(target, room, user) {
+            if (!this.can('hotpatch')) return false;
+            delete user.getIdentity;
+            user.updateIdentity();
+            this.sendReply("You are now showing your group.");
+            },
+
+
+
+
+afk: 'away',
+	away: function(target, room, user, connection) {
+		if (!this.can('lock')) return false;
+		if (!user.isAway) {
+			var originalName = user.name;
+			var awayName = user.name + ' - ⒶⒻⓀ';
+			delete Users.get(awayName);
+			user.forceRename(awayName, undefined, true);
+			this.add('|raw|-- <b><font color="#000000">' + originalName +'</font color></b> is now away. '+ (target ? " (" + target + ")" : ""));
+			user.isAway = true;
+		}
+		else {
+			return this.sendReply('You are already set as away, type /back if you are now back');
+		}
+		user.updateIdentity();
+	},
+
+unafk: 'unafk',
+	back: function(target, room, user, connection) {
+		if (!this.can('lock')) return false;
+		if (user.isAway) {
+			var name = user.name;
+			var newName = name.substr(0, name.length - 6);
+			delete Users.get(newName);
+			user.forceRename(newName, undefined, true);
+			user.authenticated = true;
+			this.add('|raw|-- <b><font color="#000000">' + newName + '</font color></b> is back');
+			user.isAway = false;
+		}
+		else {
+			return this.sendReply('You are not set as away.');
+		}
+		user.updateIdentity();
+	},
+
+
+
+stafflist: function (target, room, user) {
+        var buffer = {
+            admins: [],
+            leaders: [],
+            mods: [],
+            drivers: [],
+            voices: []
+        };
+
+        var staffList = fs.readFileSync(path.join('./config/usergroups.csv'), 'utf8').split('\n');
+        var numStaff = 0;
+        var staff;
+
+        var len = staffList.length;
+        while (len--) {
+            staff = staffList[len].split(',');
+            if (staff.length >= 2) numStaff++;
+            if (staff[1] === '~') {
+                buffer.admins.push(staff[0]);
+            }
+            if (staff[1] === '&') {
+                buffer.leaders.push(staff[0]);
+            }
+            if (staff[1] === '@') {
+                buffer.mods.push(staff[0]);
+            }
+            if (staff[1] === '%') {
+                buffer.drivers.push(staff[0]);
+            }
+            if (staff[1] === '+') {
+                buffer.voices.push(staff[0]);
+            }
+        }
+
+        buffer.admins = buffer.admins.join(', ');
+        buffer.leaders = buffer.leaders.join(', ');
+        buffer.mods = buffer.mods.join(', ');
+        buffer.drivers = buffer.drivers.join(', ');
+        buffer.voices = buffer.voices.join(', ');
+
+        this.popupReply('Administrators:\n--------------------\n' + buffer.admins + '\n\nLeaders:\n-------------------- \n' + buffer.leaders + '\n\nModerators:\n-------------------- \n' + buffer.mods + '\n\nDrivers:\n--------------------\n' + buffer.drivers + '\n\nVoices:\n-------------------- \n' + buffer.voices + '\n\n\t\t\t\tTotal Staff Members: ' + numStaff);
+    },
 
 	/*********************************************************
 	 * Battle commands
