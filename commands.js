@@ -1670,10 +1670,7 @@ var commands = exports.commands = {
             delete user.getIdentity;
             user.updateIdentity();
             this.sendReply("You are now showing your group.");
-            },
-
-
-
+         },
 
 afk: 'away',
 	away: function(target, room, user, connection) {
@@ -1690,7 +1687,7 @@ afk: 'away',
 			return this.sendReply('You are already set as away, type /back if you are now back');
 		}
 		user.updateIdentity();
-	},
+	 },
 
 unafk: 'unafk',
 	back: function(target, room, user, connection) {
@@ -1708,9 +1705,7 @@ unafk: 'unafk',
 			return this.sendReply('You are not set as away.');
 		}
 		user.updateIdentity();
-	},
-
-
+	 },
 
 stafflist: function (target, room, user) {
         var buffer = {
@@ -2093,7 +2088,7 @@ stafflist: function (target, room, user) {
 			}
 		}
 		user.rename(targetName, targetToken, targetAuth, connection);
-	}
+	},
 	
 	regdate: function (target, room, user, connection) {
         if (!this.canBroadcast()) return;
