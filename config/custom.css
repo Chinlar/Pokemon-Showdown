@@ -7,7 +7,8 @@
  * other words, you can use this facility to introduce a custom theme for
  * your server.
  */
-   background: url("http://i.imgur.com/5dpeWPn.jpg");
+ body {
+    background: url("http://i.imgur.com/5dpeWPn.jpg");
 }
  
 .pm-window {
@@ -105,4 +106,3 @@
 .sunweather, .sunnydayweather {
     background: url(http://i.imgur.com/Acqm3wY.png) no-repeat scroll left top;
 }
- 
