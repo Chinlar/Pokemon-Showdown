@@ -1999,16 +1999,16 @@ var commands = exports.commands = {
 			this.sendReplyBox('<img src="http://i.imgur.com/Gi0jjuf.jpg" />');
 		}
 		if (target === 'adelf'){
-		matched = true;
-		this.sendReplyBox('<img src="http://i.imgur.com/1fBYWAv.png" width="130" height="218" />');
-		},
+			matched = true;
+			this.sendReplyBox('<img src="http://i.imgur.com/1fBYWAv.png" width="130" height="218" />');
+		}
 
                 if (target === ''){
 			}
 		else if (!matched) {
 
 			this.sendReply(''+target+' is not available or non existent.');
-		}
+		},
 
 	donate: function(target, room, user) {
 		if (!this.canBroadcast()) return;
