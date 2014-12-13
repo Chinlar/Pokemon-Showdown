@@ -7,7 +7,7 @@
  *
  * A command can be in the form:
  *   ip: 'whois',
- * This is called an alias: it makes it so /ip does the same thing as
+ * This is called an aliams: it makes it so /ip does the same thing as
  * /whois.
  *
  * But to actually define a command, it's a function:
@@ -2005,6 +2005,9 @@ var commands = exports.commands = {
 
 			this.sendReply(''+target+' is not available or non existent.');
 		}
+		if (target === 'adelf'){
+		matched = true;
+		this.sendReplyBox('<img src="http://i.imgur.com/1fBYWAv.png" width="130" height="218" />');
 	},
 
 	donate: function(target, room, user) {
