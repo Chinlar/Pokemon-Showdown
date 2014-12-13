@@ -7,126 +7,102 @@
  * other words, you can use this facility to introduce a custom theme for
  * your server.
  */
-body {
-    background: url("http://i.imgur.com/5dpeWPn.jpg");
+   background: url("http://i.imgur.com/5dpeWPn.jpg");
 }
-
+ 
 .pm-window {
     background: rgba(30, 30, 30, 0.8);
     color:#EFEFEF;
 }
-
+ 
 .pm-log {
     background:url("http://i.imgur.com/Q8vHT0Y.png");
     color:#333333;
     font-style:italic;
 }
-
+ 
 .pm-log:hover {
     color:#000000;
 }
-
+ 
 .pm-log-add {
     background: rgba(228, 114, 228, 0.8);
     border-radius: 0px;
 }
-
+ 
 .pm-log-add:hover {
     background:#E472E4;
 }
-
+ 
 .header {
     background:#1E1E1E;
 }
-
+ 
 .userlist {
-    background:rgba(30, 30, 30, 0.75);
+    background:rgba(30, 30, 30, 0.65);
 }
-
+ 
 .userlist li em.group {
     color: #FFFFFF;
 }
-
+ 
 .userlist li {
     border-bottom: 1px solid #FFFFFF;
 }
 
+.userlist li:hover {
+    background:#CDCDCD;
+}
+ 
 .tabbar a.button {
     background:#E472E4;
     color:#FFF;
 }
-
+ 
 .tabbar a.button:hover {
     background:#E586E5;
 }
-
+ 
 .tabbar a.button.cur,.tabbar a.button.cur:hover {
     color:#FFF;
     background:#DC37DC;
     border-color:#FFF;
 }
-
+ 
 .tabbar {
 }
 .maintabbarbottom {
     background:#DC37DC
 }
-
-.teambuilder-results { 
+ 
+.teambuilder-results {
     color:#FFFFFF;
 }
 .ps-room.ps-room-light.scrollable {
     background: rgba(0, 0, 0, 0.44);
         color:#FFFFFF;
 }
-
+ 
 .menugroup {
     background:rgba(229, 134, 229, 0.34);
 }
-
+ 
 .menugroup .button {
     background:rgba(30, 30, 30, .8);
     color:#E586E5;
 }
-
+ 
 .menugroup .button:hover {
     background:#1E1E1E;
     color: #E586E5;
 }
-
+ 
 .tournament-title {
     background:#E586E5;
-
+ 
 }
-
+ 
 .sunweather, .sunnydayweather {
     background: url(http://i.imgur.com/Acqm3wY.png) no-repeat scroll left top;
 }
-
-.rainweather, .raindanceweather {
-    background: url(http://i.imgur.com/6oeWUQ3.png) no-repeat scroll left top;
-}
-  
-.hailweather {
-    background: url(http://i.imgur.com/T2mCkYF.png) no-repeat scroll left top;
-}
-
-.sandstormweather {
-    background: url(http://i.imgur.com/loxBPOI.png) no-repeat scroll left top;
-}
-
-.pseudoweather{
-    background: url(http://i.imgur.com/diinudq.png) no-repeat scroll left top;
-}
-
-.desolatelandweather{
-    background: url(http://i.imgur.com/ZERrDjt.png) no-repeat scroll left top;
-}
-
-.primordialseaweather{
-    background: url(http://i.imgur.com/D6p3zZQ.png) no-repeat scroll left top;
-}
-
-.deltastreamweather{
-    background: url(http://i.imgur.com/11qewQj.png) no-repeat scroll left top;
-}  
+ 
