@@ -50,7 +50,7 @@ body {
 .userlist li {
     border-bottom: 1px solid #FFFFFF;
 }
-
+ 
 .userlist li:hover {
     background:#CDCDCD;
 }
@@ -75,11 +75,8 @@ body {
 .maintabbarbottom {
     background:#DC37DC
 }
- 
-.teambuilder-results {
-    color:#FFFFFF;
-}
-.ps-room.ps-room-light.scrollable {
+
+.ps-room {
     background: rgba(0, 0, 0, 0.44);
         color:#FFFFFF;
 }
