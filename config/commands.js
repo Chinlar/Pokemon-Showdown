@@ -2004,7 +2004,7 @@ var commands = exports.commands = {
 		}
 		if (target === 'parukia'){
 			matched = true;
-			this.sendReplyBox('<img src="http://i.imgur.com/GrarWKm.png" width="300" height="226" />');
+			this.sendReplyBox('<img src="http://i.imgur.com/qJma9RJ.jpg" width="300" height="226" />');
 		}
 		
                 if (target === ''){
