@@ -2002,6 +2002,10 @@ var commands = exports.commands = {
 			matched = true;
 			this.sendReplyBox('<img src="http://i.imgur.com/1fBYWAv.png" width="130" height="218" />');
 		}
+		if (target === 'parukia'){
+			matched = true;
+			this.sendReplyBox('<img src="http://i.imgur.com/SfGjfMQ.jpg" width="300" height="226" />');
+		}
 		
                 if (target === ''){
 			}
