@@ -2024,7 +2024,7 @@ var commands = exports.commands = {
 		}
 		if (target === 'hm01'){
 			matched = true;
-			this.sendReplyBox('<img src="http://i.imgur.com/B7BNIfS.jpg" />');
+			this.sendReplyBox('<img src="http://i.imgur.com/zl7CBuw.jpg" />');
 		}
 		if (target === 'bitch please'){
 			matched = true;
