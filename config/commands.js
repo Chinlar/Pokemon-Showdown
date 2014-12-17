@@ -2046,7 +2046,7 @@ var commands = exports.commands = {
 			matched = true;
 			this.sendReplyBox('<img src="http://i.imgur.com/vXffwmY.jpg" />');
 		}
-		if (target === ‘snickers’){
+		if (target === 'snickers'){
 			matched = true;
 			this.sendReplyBox('<img src="http://static.fjcdn.com/pictures/Grab+a+snickers+not+mine_b3375c_4726614.png" />');
 		}
