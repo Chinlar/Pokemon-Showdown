@@ -845,3 +845,14 @@ body {
 .deltastreamweather{
     background: url(http://i.imgur.com/11qewQj.png) no-repeat scroll left top;
 }
+.chat.highlighted { 
+    background:#2B2B2B;
+    color:#FFF;
+    font-style:italic;
+}
+
+.message-announce {
+    background:#2B2B2B;
+    color:#FFF;
+    font-style:italic;
+}
