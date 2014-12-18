@@ -206,6 +206,7 @@ exports.groups = {
 		modchatall: true,
 		rangeban: true,
 		potd: true,
+		hideauth: true,
 		disableladder: true,
 		globalonly: true,
 		tournamentsmanagement: true,
