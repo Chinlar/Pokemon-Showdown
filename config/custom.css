@@ -465,11 +465,7 @@ body {
     word-wrap: normal;
 }
   
-.utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
-    color: #E2E2E2;
-    font-size: 7pt;
-    font-style: normal;
-}
+
   
 .setchart {
     border: 1px solid #999;
@@ -500,6 +496,7 @@ body {
   
 .teambuilder-results .result a {
     cursor: pointer;
+    font-size:7pt;
 }
   
 .setchart label, .setchart-nickname label {
@@ -542,6 +539,7 @@ body {
   
 .utilichart .movedesccol {
     width: 284px;
+    font-size:7pt;
 }
   
   .teambar button {
@@ -560,8 +558,42 @@ body {
     font-family: Verdana,Arial,sans-serif;
     opacity:.8;
 }
+    
+.utilichart .pplabelcol {
+   font-size:7pt
+       width:25px;
+}
+    
+.utilichart .widelabelcol {
+    text-align: center;
+    width: 50px;
+    font-size:7pt 
+}
+    
+    .utilichart .labelcol {
+    text-align: center;
+    width: 30px;
+    margin-left: -2px;
+        font-size:7pt
+}
+    
+.utilichart .twoabilitycol {
+    padding-top: 0px;
+    height: 28px;
+    font-size: 7pt;
+    width: 90px;
+}
+    
+    .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol {
+    padding-top: 0px;
+    height: 28px;
+    width: 24px;
+    text-align: right;
+    font-size: 7pt;
+}
+    
   
- .teambar button:hover {
+.teambar button:hover {
          color: #FFF;
     background:#212121;
     border-color: #AAA;
